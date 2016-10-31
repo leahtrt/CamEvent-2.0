@@ -10,6 +10,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/title"
+        android:id="@+id/textViewTitle" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTitle"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/textViewBuilding"
         android:id="@+id/textViewBuilding" />
 
@@ -39,7 +52,7 @@
         <EditText
             android:id="@+id/etxt_fromtime"
             android:layout_width="128dp"
-            android:layout_height="87dp"
+            android:layout_height="match_parent"
             android:hint="Start Time" />
     </LinearLayout>
 
@@ -58,13 +71,13 @@
 
         <EditText
             android:id="@+id/etxt_todate"
-            android:layout_width="128dp"
-            android:layout_height="87dp"
+            android:layout_width="138dp"
+            android:layout_height="90dp"
             android:hint="End Date" />
 
         <EditText
             android:id="@+id/etxt_totime"
-            android:layout_width="128dp"
+            android:layout_width="match_parent"
             android:layout_height="87dp"
             android:hint="End Time" />
     </LinearLayout>
@@ -81,12 +94,38 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinnerType" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/description"
+        android:id="@+id/textViewDescription" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextDescription"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/capacity"
+        android:id="@+id/textViewCapacity" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/editTextCapacity" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/search"
+        android:text="@string/post"
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"
-        android:onClick="search" />
+        android:onClick="post" />
 
 </LinearLayout>
