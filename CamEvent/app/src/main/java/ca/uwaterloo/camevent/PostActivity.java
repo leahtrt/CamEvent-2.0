@@ -2,23 +2,30 @@ package ca.uwaterloo.camevent;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.app.Dialog;
+
 import android.app.TimePickerDialog;
+
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
+
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 
-public class SearchActivity extends Activity implements View.OnClickListener {
+public class PostActivity extends Activity implements View.OnClickListener {
 
     private Spinner spinnerBuilding;
     private Spinner spinnerType;
@@ -38,7 +45,7 @@ public class SearchActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_post);
 
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
 
@@ -145,23 +152,8 @@ public class SearchActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    public void search(View view){
+    public void post(View view){
         Intent intent = new Intent(this,MapsActivity.class);
-
-        String buildingData = spinnerBuilding.getSelectedItem().toString();
-        String typeData = spinnerType.getSelectedItem().toString();
-        String fromDateData = fromDateEtxt.getText().toString();
-        String fromTimeData = fromTimeEtxt.getText().toString();
-        String toDateData = toDateEtxt.getText().toString();
-        String toTimeData = toTimeEtxt.getText().toString();
-
-        intent.putExtra("buildingData",buildingData);
-        intent.putExtra("typeData",typeData);
-        intent.putExtra("fromDateData",fromDateData);
-        intent.putExtra("fromTimeData",fromTimeData);
-        intent.putExtra("toDateData",toDateData);
-        intent.putExtra("toTimeData",toTimeData);
-
         startActivity(intent);
     }
 

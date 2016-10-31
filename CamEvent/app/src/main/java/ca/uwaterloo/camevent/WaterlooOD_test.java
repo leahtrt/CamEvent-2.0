@@ -77,10 +77,11 @@ public class WaterlooOD_test extends AppCompatActivity implements JSONDownloader
         Log.d(LOGCAT_TAG, eventTimes.get(0).getStartDate());
         //double a=43.471174;
         //System.out.println(a);
-        EventDBHandler eventDB= new EventDBHandler(this);
-        Eventinfo eventinfo=new Eventinfo(events.getEventTitle(),events.getLocationName(),String.valueOf(events.getLatitude()),String.valueOf(events.getLongitude()),events.getEventDescriptionRaw(),events.getLink(),eventTimes.get(0).getStartDate());
-        eventDB.addEventinfo(eventinfo);
-        Eventinfo eventinfo1= eventDB.getEvent(1);
-        System.out.println(eventinfo1.getEventDescriptionRow());
+
+        //EventDBHandler eventDB= new EventDBHandler(this);
+        //Eventinfo eventinfo=new Eventinfo(events.getEventTitle(),events.getLocationName(),String.valueOf(events.getLatitude()),String.valueOf(events.getLongitude()),events.getEventDescriptionRaw(),events.getLink(),eventTimes.get(0).getStartDate());
+        //eventDB.addEventinfo(eventinfo);
+        //Eventinfo eventinfo1= eventDB.getEvent(1);
+        //System.out.println(eventinfo1.getEventDescriptionRow());
     }
 }
